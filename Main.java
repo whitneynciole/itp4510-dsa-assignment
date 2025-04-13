@@ -26,7 +26,7 @@ public class Main {
             throw new InvalidInputException();
         }
 
-        if (simulationMinutes < 0) {
+        if (simulationMinutes <= 0) {
             throw new InvalidSimulationMinutesException();
         }
 
@@ -58,7 +58,7 @@ public class Main {
 
             // Serving time for new customer
             System.out.print("Input serving time for a new customer: ");
-            int servingTime = input.nextInt();
+            int servingTime;
 
             // Throw exceptions
             try {
@@ -140,8 +140,8 @@ public class Main {
         System.out.println("Total minute simulated: " + simulationMinutes + " minutes");
         System.out.println("Number of Tellers: " + maxTellers);
         System.out.println("Number of customer served: " + customerServedCount);
-        System.out.println("Average number of customers in the queue " + ((float) totalQueueOverTime / simulationMinutes));
-        System.out.println("Max queue length " + maxQueueLength);
+        System.out.println("Average number of customers in the queue: " + ((float) totalQueueOverTime / simulationMinutes));
+        System.out.println("Max queue length: " + maxQueueLength);
     }
 
     public static void printCurrentIteration(Teller[] tellers, int currentMinute, ListQueue waitLine) {

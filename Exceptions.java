@@ -1,6 +1,6 @@
 class InvalidInputException extends RuntimeException {
 	public InvalidInputException ()
-		{ super("Please enter an integer"); }
+		{ super("Please only enter an integer"); }
 }
 
 class InvalidSimulationMinutesException extends RuntimeException {
